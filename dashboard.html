@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistics Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+  <body class="bg-[#732028]">
+   
+    <header
+      id="fonthead"
+      class="bg-[#286c7e] text-white p-4 flex justify-between items-center border border-gray-400"
+    >
+    <a class="text-4xl font-bold" href="./index.html">  <img src="logo-removebg-preview (2).png" alt="School Logo" class="w-20 h-auto mr-4"></a>
+      
+        <span class="font-bold text-4xl text-white navitext"
+          >Admin Dashboard</span
+        >
+    
+      <div id="logoutContainer" class="right-4">
+        <a href="./dustboard.html">
+          <button
+            id="logoutBtn"
+            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          >
+           Go back to Enrollment
+          </button>
+        </a>
+      </div>
+    </header>
+
+    <main class="p-6 ">
+      <section
+        class="bg-white p-4 shadow-md rounded mb-6  border-4 border-yellow-400 "
+      >
+        <h2 class="text-2xl font-semibold mb-4 text-center" id="conthead">
+          Student Statistics
+        </h2>
+        <div id="stats" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div
+            class="bg-blue-100 p-4 rounded shadow border border-gray-400 rounded"
+          >
+            <h3 class="font-bold "  id="conthead">Total Students</h3>
+            <p id="totalStudents" class="text-3xl"></p>
+          </div>
+          <div
+            class="bg-green-100 p-4 rounded shadow border border-gray-400 rounded"
+          >
+            <h3 class="font-bold"  id="conthead">Total Male Students</h3>
+            <p id="totalMales" class="text-3xl"></p>
+          </div>
+          <div
+            class="bg-pink-100 p-4 rounded shadow border border-gray-400 rounded"
+          >
+            <h3 class="font-bold"  id="conthead">Total Female Students</h3>
+            <p id="totalFemales" class="text-3xl"></p>
+          </div>
+          <div
+            class="bg-pink-100 p-4 rounded shadow border border-gray-400 rounded"
+          >
+            <h3 class="font-bold"  id="conthead">Total First Year Students</h3>
+            <p id="totalFirst" class="text-3xl"></p>
+          </div>
+          <div
+            class="bg-pink-100 p-4 rounded shadow border border-gray-400 rounded"
+          >
+            <h3 class="font-bold"  id="conthead">Total Second Year Students</h3>
+            <p id="totalSecond" class="text-3xl"></p>
+          </div>
+          <div
+            class="bg-pink-100 p-4 rounded shadow border border-gray-400 rounded"
+          >
+            <h3 class="font-bold"  id="conthead">Total Third Year Students</h3>
+            <p id="totalThird" class="text-3xl"></p>
+          </div>
+          <div
+            class="bg-pink-100 p-4 rounded shadow border border-gray-400 rounded"
+          >
+            <h3 class="font-bold"  id="conthead">Total Fourth Year Students</h3>
+            <p id="totalFourth" class="text-3xl"></p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mb-4 text-center" id="conthead">
+          Course Statistics
+        </h2>
+        <div
+          id="courseStats"
+          class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"
+        >
+          <div
+            class="bg-purple-100 p-4 rounded shadow border border-gray-400 rounded"
+          >
+            <h3 class="font-bold"  id="conthead">Electrical Engineering</h3>
+            <p id="totalElectrical" class="text-3xl"></p>
+          </div>
+          <div
+            class="bg-purple-100 p-4 rounded shadow border border-gray-400 rounded"
+          >
+            <h3 class="font-bold"  id="conthead">Mechanical Engineering</h3>
+            <p id="totalMechanical" class="text-3xl"></p>
+          </div>
+          <div
+            class="bg-purple-100 p-4 rounded shadow border border-gray-400 rounded"
+          >
+            <h3 class="font-bold"  id="conthead">Civil Engineering</h3>
+            <p id="totalCivil" class="text-3xl"></p>
+          </div>
+          <div
+            class="bg-purple-100 p-4 rounded shadow border border-gray-400 rounded"
+          >
+            <h3 class="font-bold"  id="conthead">Electronics and Communication Engineering</h3>
+            <p id="totalElectronics" class="text-3xl"></p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mb-4 text-center" id="conthead">
+          Student Distribution Chart
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center mb-6"
+        >
+          <div class="w-full max-w-xs">
+            <canvas id="genderChart"></canvas>
+          </div>
+          <div class="w-full max-w-xs">
+            <canvas id="yearLevelChart"></canvas>
+          </div>
+          <div class="w-full max-w-xs">
+            <canvas id="courseChart"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

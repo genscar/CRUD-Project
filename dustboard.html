@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<body  class="bg-[#732028]">
+
+    <header
+      id="fonthead"
+      class="bg-[#286c7e] text-white p-4 flex justify-between items-center border border-gray-400"
+    >
+    <a class="text-4xl font-bold" href="./index.html">  <img src="logo-removebg-preview (2).png" alt="School Logo" class="w-20 h-auto mr-4"></a>
+  
+        <span class="font-bold text-4xl text-white navitext"
+          >Admin Dashboard</span
+        >
+    
+      <div id="logoutContainer" class="right-4">
+        <a href="./login.html">
+          <button
+            id="logoutBtn"
+            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          >
+           Logout
+          </button>
+        </a>
+      </div>
+    </header>
+    
+    <div id="conthead" class="flex ">
+        <aside class="w-1/8 bg-cyan-800 p-4 shadow-md border border-4 border-yellow-400 font-bold relative h-[910px]">
+            <nav >
+                <ul>
+                    <li><a href="#enroll" class="block py-2 px-4 hover:text-blue-200  text-yellow-400">Enroll Students</a></li>
+                    <li><a href="#view" class="block py-2 px-4 hover:text-blue-200 text-yellow-400">View Students</a></li>
+                    <li><a href="./dashboard.html" target="_blank" class="block py-2 px-4 hover:text-blue-200 text-yellow-400">View Statistics</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="w-full p-6 border border-t-4 border-b-[#732028] border-x-[#732028] border-yellow-400 ">
+
+            <section id="enroll" class="mb-6  ">
+                <h1 class="text-4xl font-semibold mb-4 text-yellow-400">Enrollment Form</h1>
+                <h2 class="text-2xl font-semibold mb-4 text-yellow-400">Fill out the following</h2>
+                <form id="enrollmentForm" class="bg-white p-4 shadow-md rounded border-2 border-yellow-400 ">
+                    <h3 class="font-semibold mb-4">Name</h3>
+                    <input type="text" name="name" placeholder="Name" required class="border border-2 border-gray-900 p-2 mb-4 w-1/2 rounded">
+                    
+                    <h3 class="font-semibold mb-4">Email</h3>
+                    <input type="email" name="email" placeholder="Email" required class="border border-2 border-gray-900 p-2 mb-4 w-1/2 rounded">
+                    
+                    <h3 class="font-semibold mb-4">Phone Number</h3>
+                    <input type="text" name="phone" placeholder="Phone Number" required class="border border-2 border-gray-900 p-2 mb-4 w-1/2 rounded">
+                    
+                    <h3 class="font-semibold mb-4">Birth Date</h3>
+                    <input title="bday" type="date" name="dateOfBirth" required class="border border-2 border-gray-900 p-2 mb-4 w-1/2 rounded">
+                
+                    <h3 class="font-semibold mb-4">Course</h3>
+                    <select title="course" name="course" required class="border border-2 border-gray-900 p-2 mb-4 w-1/2 rounded">
+                        <option value="">--Select Course--</option>
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        <option value="Civil Engineering">Civil Engineering</option>
+                        <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+                    </select>
+
+                    <h3 class="font-semibold mb-4">Gender</h3>
+                    <select title="gender" name="gender" required class="border border-gray-300 p-2 mb-4 w-1/2 rounded border-2 border-gray-900">
+                        <option value="">--Select Gender--</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+
+                    <h3 class="font-semibold mb-4">Year Level</h3>
+                    <select title="yearLevel" name="yearLevel" required class="border border-gray-300 p-2 mb-4 w-1/2 rounded border-2 border-gray-900">
+                        <option value="">--Select Year Level--</option>
+                        <option value="First">First</option>
+                        <option value="Second">Second</option>
+                        <option value="Third">Third</option>
+                        <option value="Fourth">Fourth</option>
+                    </select>
+
+                    <div class="mb-4">
+                        <button type="submit" class="bg-blue-800 border border-2 border-gray-400 text-white py-2 px-4 rounded">Submit</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="view">
+                <h2 class="text-2xl font-semibold mb-4 text-yellow-400">Enrolled Students</h2>
+                <table class="min-w-full bg-white shadow-md rounded border border-2 border-yellow-400">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="py-2 px-4 text-left">Name</th>
+                            <th class="py-2 px-4 text-left">Email</th>
+                            <th class="py-2 px-4 text-left">Phone</th>
+                            <th class="py-2 px-4 text-left">Course</th>
+                            <th class="py-2 px-4 text-left">Gender</th> 
+                            <th class="py-2 px-4 text-left">Year Level</th>  
+                            <th class="py-2 px-4 text-left"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="dustboard.js"></script> 
+</body>
+</html>
